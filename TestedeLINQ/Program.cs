@@ -19,21 +19,22 @@ namespace TestedeLINQ
                 Console.WriteLine(todos);
             }
 
+            //soma dos elementos
             int somaTotal = lista.Sum();
             Console.WriteLine($"\nA soma de todos os números da lista é: {somaTotal}.");
 
+            //contagem de elementos
             int numeroElementos = lista.Count();
             Console.WriteLine($"\nO número de elementos individuais da lista é: {numeroElementos}.");
 
+            //minimos e maximos
             int min = lista.Min();
             int max = lista.Max();
             Console.WriteLine("\nO menor número da lista é {0} e o maior é {1}.", min, max);
 
+            //uso de metodo aggregate e expressao lambda
             int agregados = lista.Aggregate((a, b) => a + b);
             Console.WriteLine($"\nA soma de todos os números, usando outro método é: {agregados}.");
-
-
-
 
             //metodo para selecionar somente os impares, modulo diferente de zero
             var listaImpares = lista.Where(n => n % 2 != 0).ToList();
@@ -59,8 +60,6 @@ namespace TestedeLINQ
             {
                 Console.WriteLine(item);
             }
-
-
 
             //lista de numeros por extenso (strings)
             var listaString = new List<string>
